@@ -1,0 +1,29 @@
+define Consonant b | c | d | f | g | h | k | l | m | n | p | q | r | s | t | v | w | x | y | z | ɖ | ʃ | ɣ | β | ð | ʐ | h̵ | ʕ;
+define Vowel a | e | i | o | u;
+define jConsonant Consonant | j; 
+
+define VowelInsertionA [..] -> a || a Consonant _ jConsonant [.#. | [t a j .#.] | [t a .#.] | [n a j .#.]];
+define VowelInsertionE [..] -> e || e Consonant _ jConsonant [.#. | [t a j .#.] | [t a .#.] | [n a j .#.]];
+define VowelInsertionI [..] -> i || i Consonant _ jConsonant [.#. | [t a j .#.] | [t a .#.] | [n a j .#.]];
+define VowelInsertionO [..] -> o || o Consonant _ jConsonant [.#. | [t a j .#.] | [t a .#.] | [n a j .#.]];
+define VowelInsertionU [..] -> u || u Consonant _ jConsonant [.#. | [t a j .#.] | [t a .#.] | [n a j .#.]];
+
+define MNFormChange m -> n || _ [.#. | [t a .#.] | [t a j .#.] | [n a j .#.]];
+
+define Spirantization b -> β,
+                      d -> ð,
+                      g -> ɣ,
+                      ɖ -> ʐ || Vowel _ Vowel;
+
+define DTDeletion t -> 0 || [d | ɖ] _ a;
+
+
+define Shaification [l t] -> [ʃ] || _ [a .#. | [a j .#.]] ;
+
+
+define LNAJConversion [l n a j] -> [l l a j] || _ .#.;
+
+
+define VI VowelInsertionA .o. VowelInsertionE .o. VowelInsertionI .o. VowelInsertionO .o. VowelInsertionU;
+read regex VI .o.  MNFormChange .o. Spirantization .o. DTDeletion .o. LNAJConversion .o. Shaification;
+# save stack somali.fst
