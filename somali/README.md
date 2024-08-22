@@ -1,6 +1,6 @@
 # Somali
 
-### Run Commands
+## Run Commands
 Use the following commands to generate the Somali word surface forms from the underlying forms
 ```
 foma -l somali.xfst
@@ -9,7 +9,7 @@ compose net
 print lower-words > output-surface-forms.txt
 ```
 
-### Phonological Analysis
+## Phonological Analysis
 I discovered 6 rules while determining the URs (underlying representations) of the Somali verbs and nouns. I named and ordered them as follows:-
 1. **Vowel Insertion** \
 Any cluster of two consecutive consonants (with the exception of ‘j’ as the first consonant) in the root word have the same vowel inserted between them as the one that precedes this cluster.
@@ -43,6 +43,7 @@ The sequence ‘lt’ becomes ‘ʃ’ when it occurs before suffixes starting w
 
 `lt -> ʃ / _ [a#, aj#]`
 
+## Morphological Analysis
 Somali verbs use the following suffixes:
 
 | Glossing Abbreviation | Suffix Underlying Form |
