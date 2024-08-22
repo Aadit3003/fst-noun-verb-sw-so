@@ -1,5 +1,5 @@
 # Morphological and Phonological Analysis of East African languages (so, sw)
-Morphological analysis of Somali and Swahili Noun + Verb forms
+Morphological and Phonological analysis of 2 East African languages - Somali and Swahili. The Somali list of underlying forms contains 135 words (both nouns and verbs), and the Swahili list of lexeme forms contains 452 words (52 nouns, 400 verbs). We use FOMA and LEXC scripts to write the Finite State Transducers for both languages.
 
 ## File Structure
 
