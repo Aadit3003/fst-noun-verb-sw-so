@@ -1,26 +1,22 @@
-# Morphological Analysis of East African languages (so, sw)
+# Morphological and Phonological Analysis of East African languages (so, sw)
 Morphological analysis of Somali and Swahili Noun + Verb forms
 
 ## File Structure
 
 The files are organized as follows
 * somali
-  * somali.xfst - The FOMA script with the Phonological Rules for Somali
+  * somali.xfst - The FOMA script with the Phonological rules for Somali nouns and verbs
   * underlying-forms.txt - The list of 135 underlying forms
   * output-surface-forms.txt - The list of 135 surface forms of the Somali words (output of the FOMA script)
 * swahili
-  * swahili.lexc - The LEXC FST for Swahili
-  * swahili.xfst - The FOMA script with the Phonological Rules for Swahili
+  * swahili.lexc - The LEXC FST with the Morphological rules for Swahili nouns and verbs
+  * swahili.xfst - The FOMA script with the Phonological rules for Swahili nouns and verbs
   * lexical.txt - The lexical forms of 452 Swahili words (52 Nouns and 400 Verbs)
   * morphemic.txt - The morpheme (boundaries indicated) of these 452 Swahili words (output of the LEXC script)
   * surface.txt - The surface forms of the 452 Swahili words (output of the FOMA script)
 * utilities
   * diff.py - Python program to compare txt files (line by line) and report differences
  
-
-
-
-
 
 
 ## Somali
@@ -36,22 +32,17 @@ print lower-words > output-surface-forms.txt
 
 ### Phonological Analysis
 - Refer to the following [README](https://github.com/Aadit3003/fst-noun-verb-sw-so/tree/c43d6eeb1d84769d7dd163b3532fdba53af3e3b7/somali) for a details on the 6 Somali Phonological rules I used.
-- Refer to the following [FOMA script](https://github.com/Aadit3003/fst-noun-verb-sw-so/blob/c43d6eeb1d84769d7dd163b3532fdba53af3e3b7/somali/somali.xfst) for the Somali Finite State Transducer
+- Refer to the following [FOMA script](https://github.com/Aadit3003/fst-noun-verb-sw-so/blob/c43d6eeb1d84769d7dd163b3532fdba53af3e3b7/somali/somali.xfst) for the Somali Finite State Transducer.
 
 ## Swahili
 ### Run Commands
-The following code files that handle both Nouns and Verbs at once:
-- `swahili.lexc`
-- `swahili.xfst`
-
-I used the following run commands to generate and verify my outputs:
-1. To generate the Morphemic and Lexical Forms using the LEXC file
+To generate the Morphemic and Lexical Forms using the LEXC file
 ```
 lexc swahili.lexc
 print upper-words > lexical.txt
 print lower-words > morphemic.txt
 ```
-2. To generate the Lexical and Surface Forms using the XFST file
+To generate the Lexical and Surface Forms using the XFST file
 ```
 source swahili.xfst
 print upper-words > lexical.txt
@@ -59,59 +50,8 @@ print lower-words > surface.txt
 ```
 
 
-### Morphological Analysis
-
-#### Noun Rules
-1. The Singular Prefix is [u] which has two allomorphs
-  - ‘w’ before vowels
-  - ‘u’ otherwise
-2. The Plural Prefix is [n] which has several allomorphs
-  - ‘n’ becomes ‘ɲ’ before Vowels
-  - ‘n’ is deleted before Fricatives (s, f, v, ʃ)
-  - ‘n’ is deleted before stops (p, t, k), and the word-initial stops are aspirated
-  - If ‘l’ occurs after the prefix ‘n’, it becomes ‘d’. ([n l] -> [n d])
-  - ‘n’ becomes ‘ŋ’ before Velars (g)
-  - ‘n w’ and ‘n b’’ both become ‘mb’
-  - ‘n’ Otherwise (E.g. Dentals (d, z))
-
-The Plural prefix allomorphy seems to be an assimilation of the ‘n’ to the place of articulation of the consonant that comes after the ‘n’.
-
-Clarifications - In the XFST and LEXC files:-
-I have used the symbols “th”, “kh”, and “ph” to represent the aspirated characters
-The “t͡ʃ” symbol sometimes gives trouble while using ‘apply up’ or ‘apply down’
-
-#### Verb Rules
-1. The verbs seem to have the following structure **Subject_prefix ^ Tense ^ Object_Prefix ^ Verb_Stem** (^ indicates morpheme boundaries)
-2. The Subject prefixes are
-
-| Pronoun | Tag   | Prefix |
-|---------|-------|--------|
-| he      | +3SgS | a-     |
-| I       | +1SgS | ni-    |
-| you     | +2SgS | u-     |
-| we      | +1PlS | tu-    |
-| they    | +3PlS | wa-    |
-
-
-3. The Tense prefixes are
-
-| Tense   | Tag   | Prefix |
-|---------|-------|--------|
-| Future  | +Fut  | ta-    |
-| Present | +Pres | na-    |
-| Perfect | +Perf | me-    |
-| Past    | +Past | li-    |
-
-4. The Object prefixes are
-   
-| Pronoun | Tag   | Prefix |
-|---------|-------|--------|
-| him     | +3SgO | m-     |
-| me      | +1SgO | ni-    |
-| you     | +2SgO | ku-    |
-| us      | +1PlO | tu-    |
-| them    | +3PlO | wa-    |
-
-
-5. Finally, the “tu-” prefix (+1PlS) gets aspirated word-initially to “tʰu”.
+### Morphological + Phonological Analysis
+- Refer to the following [README](https://github.com/Aadit3003/fst-noun-verb-sw-so/blob/e7f386f1b5df79c68062287f6b90b2de540be7da/swahili/README.md) for a details on the Swahili Morphological and Phonological rules I used.
+- Refer to the following [LEXC script](https://github.com/Aadit3003/fst-noun-verb-sw-so/blob/e7f386f1b5df79c68062287f6b90b2de540be7da/swahili/swahili.lexc) for the Swahili Morphological Finite State Transducer.
+- Refer to the following [FOMA script](https://github.com/Aadit3003/fst-noun-verb-sw-so/blob/e7f386f1b5df79c68062287f6b90b2de540be7da/swahili/swahili.xfst) for the Swahili Phonological Finite State Transducer.
 
