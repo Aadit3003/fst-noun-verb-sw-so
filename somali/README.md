@@ -43,6 +43,9 @@ The sequence ‘lt’ becomes ‘ʃ’ when it occurs before suffixes starting w
 
 `lt -> ʃ / _ [a#, aj#]`
 
+_Note: 0 is used for empty string here (In the Vowel Insertion Rule), C stands for Consonant, and V stands for Vowel_
+
+
 ## Morphological Analysis
 Somali verbs use the following suffixes:
 
@@ -55,7 +58,3 @@ Somali verbs use the following suffixes:
 | 3SG.FEM               |          -taj          |
 | 1PL.PAST              |          -naj          |
 
-Note:
-0 is used for empty string here (In the Vowel Insertion Rule)
-C stands for Consonant
-V stands for Vowel
