@@ -5,15 +5,15 @@ Morphological analysis of Somali and Swahili Noun + Verb forms
 
 The files are organized as follows
 * somali
-  * somali.xfst
-  * underlying-forms.txt
-  * output-surface-forms.txt
+  * somali.xfst - The FOMA script with the Phonological Rules for Somali
+  * underlying-forms.txt - The list of 135 underlying forms
+  * output-surface-forms.txt - The list of 135 surface forms of the Somali words (output of the FOMA script)
 * swahili
-  * swahili.lexc
-  * swahili.xfst
-  * lexical.txt
-  * morphemic.txt
-  * surface.txt
+  * swahili.lexc - The LEXC FST for Swahili
+  * swahili.xfst - The FOMA script with the Phonological Rules for Swahili
+  * lexical.txt - The lexical forms of 452 Swahili words (52 Nouns and 400 Verbs)
+  * morphemic.txt - The morpheme (boundaries indicated) of these 452 Swahili words (output of the LEXC script)
+  * surface.txt - The surface forms of the 452 Swahili words (output of the FOMA script)
 
 
 
