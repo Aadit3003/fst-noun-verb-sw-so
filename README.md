@@ -5,12 +5,12 @@ Morphological and Phonological analysis of 2 East African languages - Somali and
 
 The files are organized as follows
 * somali
-  * somali.xfst - The FOMA script with the Phonological rules for Somali nouns and verbs
+  * somali.xfst - The xfst script with the morphophonological rules for Somali nouns and verbs
   * underlying-forms.txt - The list of 135 underlying forms
   * output-surface-forms.txt - The list of 135 surface forms of the Somali words (output of the FOMA script)
 * swahili
-  * swahili.lexc - The LEXC FST with the Morphological rules for Swahili nouns and verbs
-  * swahili.xfst - The FOMA script with the Phonological rules for Swahili nouns and verbs
+  * swahili.lexc - The lexc FST with the morphophonotactics for Swahili nouns and verbs
+  * swahili.xfst - The xfst script with the morphophonological rules for Swahili nouns and verbs
   * lexical.txt - The lexical forms of 452 Swahili words (52 Nouns and 400 Verbs)
   * morphemic.txt - The morpheme (boundaries indicated) of these 452 Swahili words (output of the LEXC script)
   * surface.txt - The surface forms of the 452 Swahili words (output of the FOMA script)
