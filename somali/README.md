@@ -1,4 +1,4 @@
-## Somali
+# Somali
 
 ### Run Commands
 Use the following commands to generate the Somali word surface forms from the underlying forms
