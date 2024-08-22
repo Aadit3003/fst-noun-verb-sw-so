@@ -14,6 +14,11 @@ The files are organized as follows
   * lexical.txt - The lexical forms of 452 Swahili words (52 Nouns and 400 Verbs)
   * morphemic.txt - The morpheme (boundaries indicated) of these 452 Swahili words (output of the LEXC script)
   * surface.txt - The surface forms of the 452 Swahili words (output of the FOMA script)
+* utilities
+  * diff.py - Python program to compare txt files (line by line) and report differences
+ 
+
+
 
 
 
