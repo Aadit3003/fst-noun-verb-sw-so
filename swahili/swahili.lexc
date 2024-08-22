@@ -1,0 +1,117 @@
+Multichar_Symbols
++N +V
++Class11
++Sg
++Pl
++1SgS +2SgS +3SgS +1PlS +3PlS
++1SgO +2SgO +3SgO +1PlO +3PlO
++Fut +Pres +Perf +Past
+
+Lexicon Root
++N:0 Noun;
++V:0 Verb;
+
+Lexicon Noun
++Class11:0 ClassEleven;
+
+Lexicon ClassEleven
++Sg:u^ NounStems;
++Pl:n^ NounStems;
+
+Lexicon NounStems
++bao:bao #;
++bawa:bawa #;
++devu:devu #;
++gwe:gwe #;
++wati:wati #;
++wanda:wanda #;
++wiŋgu:wiŋgu #;
++limi:limi #;
++paŋga:paŋga #;
++pindi:pindi #;
++tambi:tambi #;
++tepe:tepe #;
++kuta:kuta #;
++kuni:kuni #;
++kuʧa:kuʧa #;
++fuŋguo:fuŋguo #;
++fagio:fagio #;
++fizi:fizi #;
++vumbi:vumbi #;
++siku:siku #;
++ʃaŋga:ʃaŋga #;
++akati:akati #;
++ajo:ajo #;
++embe:embe #;
++avu:avu #;
++imbo:imbo #;
+
+Lexicon Verb
++Fut:0 FutureSubject;
++Pres:0 PresentSubject;
++Past:0 PastSubject;
++Perf:0 PerfectSubject;
+
+Lexicon FutureSubject
++3SgS:a^ FutureObject;
++1SgS:ni^ FutureObject;
++2SgS:u^ FutureObject;
++1PlS:tu^ FutureObject;
++3PlS:wa^ FutureObject;
+
+Lexicon PresentSubject
++3SgS:a^ PresentObject;
++1SgS:ni^ PresentObject;
++2SgS:u^ PresentObject;
++1PlS:tu^ PresentObject;
++3PlS:wa^ PresentObject;
+
+Lexicon PastSubject
++3SgS:a^ PastObject;
++1SgS:ni^ PastObject;
++2SgS:u^ PastObject;
++1PlS:tu^ PastObject;
++3PlS:wa^ PastObject;
+
+Lexicon PerfectSubject
++3SgS:a^ PerfectObject;
++1SgS:ni^ PerfectObject;
++2SgS:u^ PerfectObject;
++1PlS:tu^ PerfectObject;
++3PlS:wa^ PerfectObject;
+
+Lexicon FutureObject
++3SgO:tam^ VerbStems;
++1SgO:tani^ VerbStems;
++2SgO:taku^ VerbStems;
++1PlO:tatu^ VerbStems;
++3PlO:tawa^ VerbStems;
+
+Lexicon PresentObject
++3SgO:nam^ VerbStems;
++1SgO:nani^ VerbStems;
++2SgO:naku^ VerbStems;
++1PlO:natu^ VerbStems;
++3PlO:nawa^ VerbStems;
+
+Lexicon PerfectObject
++3SgO:mem^ VerbStems;
++1SgO:meni^ VerbStems;
++2SgO:meku^ VerbStems;
++1PlO:metu^ VerbStems;
++3PlO:mewa^ VerbStems;
+
+Lexicon PastObject
++3SgO:lim^ VerbStems;
++1SgO:lini^ VerbStems;
++2SgO:liku^ VerbStems;
++1PlO:litu^ VerbStems;
++3PlO:liwa^ VerbStems;
+
+Lexicon VerbStems
++penda:penda #;
++sumbua:sumbua #;
++piga:piga #;
++lipa:lipa #;
+
+

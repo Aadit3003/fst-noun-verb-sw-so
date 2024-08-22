@@ -1,0 +1,30 @@
+define Velar g;
+define Alveolar d | z;
+define Stop p | t | k;
+define Fricative s | ʃ | f | v;
+define Vowel a | e | i | o | u;
+
+define UVowelization u -> w || _ "^" Vowel;
+
+
+define NOne n -> ɲ || .#. _ "^" Vowel;
+define NTwo n -> 0 || .#. _ "^" Fricative;
+define NThree [n "^" l] -> [n "^" d] || .#. _;
+define NFour n -> ŋ || .#. _ "^" Velar;
+define NFive n -> n || .#. _ "^" Alveolar;
+define NSix [n "^" p] -> ["^" p h], [n "^" t] -> ["^" t h], [n "^" k] -> ["^" k h] || .#. _;
+define NSeven [n "^" w] -> [m "^" b], [n "^" b] -> [m "^" b] || .#. _;
+define NRule NOne .o. NTwo .o. NThree .o. NFour .o. NFive .o. NSix .o. NSeven;
+
+define VOne t -> [t h] || .#. _ u "^" ;
+
+define del1 "^" -> 0;
+define ExtraSymbolDeletion del1;
+
+read lexc swahili.lexc
+define Lexicon;
+
+define Grammar Lexicon .o. UVowelization .o. NRule .o. VOne .o. ExtraSymbolDeletion;
+
+
+regex Grammar;
